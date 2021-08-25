@@ -1,4 +1,4 @@
 class Concert < ActiveRecord::Base
     belongs_to :artist
-    has_many :venues
+    belongs_to :venue
 end
