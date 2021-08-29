@@ -39,7 +39,6 @@ export default class Concerts extends Component {
                     justifyContent="center"
                     alignItems="center"
                 >
-
                 {this.concertsToShow()}
                 </Grid>
             </div>

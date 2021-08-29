@@ -26,13 +26,12 @@ export default function DenseAppBar() {
             <AppBar position="static">
                 <Toolbar variant="dense" className="header">
                     <Typography variant="h6" color="inherit">
-                    <FontAwesomeIcon icon={faGuitar} />Concert Creator
+                    <FontAwesomeIcon icon={faGuitar} />Concert Editor
                     </Typography>
                 </Toolbar>
                 <Tabs aria-label="simple tabs example" className='tabs'>
-                    <Tab label="Concerts" href="/concerts" />
-                    <Tab label="Item Two" />
-                    <Tab label="Item Three" />
+                    <Tab label="Upcoming Concerts" href="/concerts" />
+                    <Tab label="add/delete concert" href="/edit" />
                 </Tabs>
             </AppBar>
         </div>
