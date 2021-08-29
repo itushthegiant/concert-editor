@@ -8,6 +8,19 @@ class Application
         concerts = Concert.where("artist_id = #{params_id}")
         new_concerts = concerts.map do |concert|
           {
+            id: concert.id,
+            title: concert.title,
+            date: concert.date,
+            artist: concert.artist,
+            venue: concert.venue
+          }
+        end
+        return [200, { 'Content-Type' => 'application/json' }, [ new_concerts.to_json ]]
+    elsif @req.path.match(/concerts/) && @req.get?
+        concerts = Concert.all
+        new_concerts = concerts.map do |concert|
+          {
+            id: concert.id,
             title: concert.title,
             date: concert.date,
             artist: concert.artist,
@@ -26,10 +39,10 @@ class Application
       id = @req.path_info.split('/artists/').last
       artist = Artist.find(id)
       artist.delete
-      return [200, { 'Content-Type' => 'application/json' }, [ {message: 'Artist deleted'}.to_json ]]
+      return [200, { 'Content-Type' => 'application/json' }, [ {message: 'Artist deleted!'}.to_json ]]
     else
       resp.write "Path Not Found"
-    end
+    end 
     resp.finish
   end
 
