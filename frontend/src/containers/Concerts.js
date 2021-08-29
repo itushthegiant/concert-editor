@@ -12,10 +12,10 @@ export default class Concerts extends Component {
 
     componentDidMount() {
         fetch('http://localhost:9292/concerts')
-        .then(resp => resp.json())
-        .then(data => this.setState({
-            concerts: data
-        }))
+            .then(resp => resp.json())
+            .then(data => this.setState({
+                concerts: data
+            }))
     }
 
 
