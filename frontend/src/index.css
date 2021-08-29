@@ -21,3 +21,7 @@ code {
   margin-bottom :-50px
 }
 
+.card-box {
+  display: inline-block;
+}
+
