@@ -17,9 +17,19 @@ import Button from '@material-ui/core/Button';
 // }));
 export default class AddConcert extends Component {
 
+    state = {
+        title: '',
+        date: '',
+        artist: '',
+        venue: ''
+    }
+
 
     handleOnChange(e) {
-        console.log(e.target.value)
+        const { name, value } = e.target
+        this.setState({
+            [name]: value
+        })
     }
 
 
@@ -28,12 +38,12 @@ export default class AddConcert extends Component {
         return (
             <div>
                 <TextField
+                    name='title'
                     onChange={this.handleOnChange}
                     id="standard-full-width"
-                    label="Label"
+                    label="Concert Title"
                     style={{ margin: 8 }}
-                    placeholder="Placeholder"
-                    helperText="Full width!"
+                    placeholder="Title"
                     fullWidth
                     margin="normal"
                     InputLabelProps={{
@@ -41,11 +51,11 @@ export default class AddConcert extends Component {
                     }}
                 />
                 <TextField
+                    name='date'
                     id="standard-full-width"
-                    label="Label"
+                    label="Date"
                     style={{ margin: 8 }}
-                    placeholder="Placeholder"
-                    helperText="Full width!"
+                    placeholder="YYYY-MM-DD"
                     fullWidth
                     margin="normal"
                     InputLabelProps={{
@@ -53,11 +63,23 @@ export default class AddConcert extends Component {
                     }}
                 />
                 <TextField
+                    name='artist'
                     id="standard-full-width"
-                    label="Label"
+                    label="Artist Name"
                     style={{ margin: 8 }}
-                    placeholder="Placeholder"
-                    helperText="Full width!"
+                    placeholder="Artist"
+                    fullWidth
+                    margin="normal"
+                    InputLabelProps={{
+                        shrink: true,
+                    }}
+                />
+                <TextField
+                    name='venue'
+                    id="standard-full-width"
+                    label="Venue Name"
+                    style={{ margin: 8 }}
+                    placeholder="Venue"
                     fullWidth
                     margin="normal"
                     InputLabelProps={{
