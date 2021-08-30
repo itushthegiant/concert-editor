@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
-import AddOrDeleteConcert from '../components/AddOrDeleteConcert'
+import AddConcert from '../components/AddConcert'
 
 
 export default class EditConcert extends Component {
+
+    state = {
+        new_concerts: []
+    }
 
 
 
@@ -11,8 +15,8 @@ export default class EditConcert extends Component {
 
     render() {
         return (
-            <div>
-                <AddOrDeleteConcert />
+            <div className='add-concert'>
+                <AddConcert />
             </div>
         )
     }

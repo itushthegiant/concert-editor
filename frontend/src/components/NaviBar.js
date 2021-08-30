@@ -22,18 +22,20 @@ export default function DenseAppBar() {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
-            <AppBar position="static">
-                <Toolbar variant="dense" className="header">
-                    <Typography variant="h6" color="inherit">
-                    <FontAwesomeIcon icon={faGuitar} />Concert Editor
-                    </Typography>
-                </Toolbar>
-                <Tabs aria-label="simple tabs example" className='tabs'>
-                    <Tab label="Upcoming Concerts" href="/concerts" />
-                    <Tab label="add/delete concert" href="/edit" />
-                </Tabs>
-            </AppBar>
+        <div className='nav-bar'>
+            <div className={classes.root}>
+                <AppBar position="static">
+                    <Toolbar variant="dense" className="header">
+                        <Typography variant="h6" color="inherit">
+                            <FontAwesomeIcon icon={faGuitar} />Concert Editor
+                        </Typography>
+                    </Toolbar>
+                    <Tabs aria-label="simple tabs example" className='tabs'>
+                        <Tab label="Upcoming Concerts" href="/concerts" />
+                        <Tab label="add concert" href="/edit" />
+                    </Tabs>
+                </AppBar>
+            </div>
         </div>
     );
 }
