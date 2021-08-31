@@ -21,6 +21,20 @@ export default class Concerts extends Component {
     }
 
 
+    componentDidUpdate() {
+        fetch('http://localhost:9292/concerts')
+            .then(resp => resp.json())
+            .then(data => {
+                if (data.length === this.state.concerts.length) 
+                    console.log(data.length)
+                else
+                this.setState({
+                    concerts: data
+                })
+            })
+    }
+
+
     concertsToShow() {
         return this.state.concerts.map(concert => {
             return <Concert conData={concert} />

@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Concerts from './containers/Concerts'
 import NaviBar from "./components/NaviBar";
-import EditConcert from "./containers/EditConcert";
-
+import AddConcert from "./components/AddConcert";
 
 
 function App() {
@@ -11,7 +10,7 @@ function App() {
       <NaviBar />
       <Switch>
         <Route exact path ='/concerts' component={Concerts} />
-        <Route exact path ='/edit' component={EditConcert} />
+        <Route exact path ='/edit' component={AddConcert} />
       </Switch>
     </Router>
   );

@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -9,30 +8,24 @@ import { faGuitar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
-}));
 
-export default function DenseAppBar() {
-    const classes = useStyles();
+
+export default function NaviBar() {
+
+  
 
     return (
         <div className='nav-bar'>
-            <div className={classes.root}>
+            <div>
                 <AppBar position="static">
                     <Toolbar variant="dense" className="header">
                         <Typography variant="h6" color="inherit">
                             <FontAwesomeIcon icon={faGuitar} />Concert Editor
                         </Typography>
                     </Toolbar>
-                    <Tabs aria-label="simple tabs example" className='tabs'>
-                        <Tab label="Upcoming Concerts" href="/concerts" />
-                        <Tab label="add concert" href="/edit" />
+                    <Tabs aria-label="simple tabs example" className='tabs' value={1}>
+                        <Tab id="simple-tab-0" label="Upcoming Concerts" href="/concerts" />
+                        <Tab id="simple-tab-1" label="add concert" href="/edit" />
                     </Tabs>
                 </AppBar>
             </div>
