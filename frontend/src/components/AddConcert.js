@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import Suggestions from './Suggestions';
+import ArtistsSuggestion from './ArtistsSuggestions';
+import VenueSuggestions from './VenueSuggestions';
 
 
 
@@ -42,6 +43,18 @@ export default class AddConcert extends Component {
 
     }
 
+    getValueFromSuggestion = (value) => {
+        this.setState({
+            artist: value
+        })
+    }
+
+    getValueFromVenue = (value) => {
+        this.setState({
+            venue: value
+        })
+    }
+
 
 
     render() {
@@ -77,19 +90,6 @@ export default class AddConcert extends Component {
                     />
                     <TextField
                         onChange={this.handleOnChange}
-                        name='artist'
-                        id="standard-full-width"
-                        label="Artist Name"
-                        style={{ margin: 8 }}
-                        placeholder="Artist"
-                        fullWidth
-                        margin="normal"
-                        InputLabelProps={{
-                            shrink: true,
-                        }}
-                    />
-                    <TextField
-                        onChange={this.handleOnChange}
                         name='venue'
                         id="standard-full-width"
                         label="Venue Name"
@@ -101,8 +101,9 @@ export default class AddConcert extends Component {
                             shrink: true,
                         }}
                     />
-                    <Suggestions />
-                    <Button variant="contained" color="primary" type="submit">
+                    <VenueSuggestions getValueFromVenue={this.getValueFromVenue}/>
+                    <ArtistsSuggestion getValueFromSuggestion={this.getValueFromSuggestion} />
+                    <Button className="add-concert" variant="contained" color="primary" type="submit">
                         Submit
                     </Button>
                 </form>

@@ -18,6 +18,11 @@ class Application
         return [200, { 'Content-Type' => 'application/json' }, [ new_concerts.to_json ]]
 
 
+    elsif @req.path.match(/venues/) && @req.get?
+      venues = Venue.all
+      return [200, { 'Content-Type' => 'application/json' }, [ venues.to_json ]]
+
+
     elsif @req.path.match(/concerts/) && @req.get?
         concerts = Concert.all
         new_concerts = concerts.map do |concert|
@@ -51,7 +56,7 @@ class Application
       concert.delete
       return [200, { 'Content-Type' => 'application/json' }, [ {message: 'Concert deleted!'}.to_json ]]
 
-      
+
     else
       resp.write "Path Not Found"
     end 
