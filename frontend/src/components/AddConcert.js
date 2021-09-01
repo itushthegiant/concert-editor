@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Suggestions from './Suggestions';
 
 
 
@@ -100,6 +101,7 @@ export default class AddConcert extends Component {
                             shrink: true,
                         }}
                     />
+                    <Suggestions />
                     <Button variant="contained" color="primary" type="submit">
                         Submit
                     </Button>
