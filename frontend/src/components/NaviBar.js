@@ -23,7 +23,7 @@ export default function NaviBar() {
                             <FontAwesomeIcon icon={faGuitar} />Concert Editor
                         </Typography>
                     </Toolbar>
-                    <Tabs aria-label="simple tabs example" className='tabs' value={1}>
+                    <Tabs aria-label="simple tabs example" className='tabs'>
                         <Tab id="simple-tab-0" label="Upcoming Concerts" href="/concerts" />
                         <Tab id="simple-tab-1" label="add concert" href="/edit" />
                     </Tabs>

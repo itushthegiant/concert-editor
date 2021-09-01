@@ -34,6 +34,8 @@ export default class Concerts extends Component {
             })
     }
 
+    
+
 
     concertsToShow() {
         return this.state.concerts.map(concert => {

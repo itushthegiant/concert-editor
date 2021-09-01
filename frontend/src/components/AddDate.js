@@ -20,7 +20,7 @@ const renderSuggestion = suggestion => (
 );
 
 
-export default class VenueSuggestions extends Component {
+export default class AddDate extends Component {
 
 
     // Autosuggest is a controlled component.
@@ -29,18 +29,11 @@ export default class VenueSuggestions extends Component {
     // Suggestions also need to be provided to the Autosuggest,
     // and they are initially empty because the Autosuggest is closed.
     state = {
-        venues: [],
+        dates: [],
         value: '',
         suggestions: []
     }
 
-    componentDidMount() {
-        fetch('http://localhost:9292/venues')
-            .then(resp => resp.json())
-            .then(data => this.setState({
-                venues: data
-            }))
-    }
 
 
     // Teach Autosuggest how to calculate suggestions for any given input value.
@@ -49,8 +42,8 @@ export default class VenueSuggestions extends Component {
         const inputLength = inputValue.length;
 
 
-        return inputLength === 0 ? [] : this.state.venues.filter(venue =>
-            venue.name.toLowerCase().slice(0, inputLength) === inputValue
+        return inputLength === 0 ? [] : this.state.dates.filter(date =>
+            date.name.toLowerCase().slice(0, inputLength) === inputValue
         );
     };
 
@@ -59,7 +52,7 @@ export default class VenueSuggestions extends Component {
         this.setState({
             value: newValue
         });
-        this.props.getValueFromVenue(newValue)
+        this.props.getValueFromDate(newValue)
     };
 
     // Autosuggest will call this function every time you need to update suggestions.
@@ -82,7 +75,7 @@ export default class VenueSuggestions extends Component {
 
         // Autosuggest will pass through all these props to the input.
         const inputProps = {
-            placeholder: 'Venue...',
+            placeholder: 'YYYY-MM-DD',
             value,
             onChange: this.onChange
         };

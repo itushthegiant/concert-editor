@@ -81,7 +81,7 @@ export default class ArtistsSuggestions extends Component {
 
         // Autosuggest will pass through all these props to the input.
         const inputProps = {
-            placeholder: 'Artist..',
+            placeholder: 'Artist...',
             value,
             onChange: this.onChange
         };
