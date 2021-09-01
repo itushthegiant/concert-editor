@@ -48,11 +48,11 @@ export default class AddDate extends Component {
     };
 
 
-    onChange = (event, { newValue }) => {
+    onChange = (key, { newValue }) => {
         this.setState({
             value: newValue
         });
-        this.props.getValueFromDate(newValue)
+        this.props.getValueFromSuggestion(key, newValue)
     };
 
     // Autosuggest will call this function every time you need to update suggestions.
@@ -77,7 +77,7 @@ export default class AddDate extends Component {
         const inputProps = {
             placeholder: 'YYYY-MM-DD',
             value,
-            onChange: this.onChange
+            onChange: (event, newValue) => this.onChange('date', newValue),
         };
 
         // Finally, render it!

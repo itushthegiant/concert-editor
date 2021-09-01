@@ -50,17 +50,6 @@ export default class AddConcert extends Component {
         })
     }
 
-    getValueFromDate = (value) => {
-        this.setState({
-            date: value
-        })
-    }
-
-    getValueFromTitle = (value) => {
-        this.setState({
-            title: value
-        })
-    }
 
 
 
@@ -69,8 +58,8 @@ export default class AddConcert extends Component {
         return (
             <div className="add-concert">
                 <form onSubmit={this.handleOnSubmit}>
-                    <AddTitle getValueFromTitle={this.getValueFromTitle} />
-                    <AddDate getValueFromDate={this.getValueFromDate}/>
+                    <AddTitle getValueFromSuggestion={this.getValueFromSuggestion} />
+                    <AddDate getValueFromSuggestion={this.getValueFromSuggestion}/>
                     <VenueSuggestions getValueFromSuggestion={this.getValueFromSuggestion}/>
                     <ArtistsSuggestion getValueFromSuggestion={this.getValueFromSuggestion} />
                     <Button className="add-concert" variant="contained" color="primary" type="submit">

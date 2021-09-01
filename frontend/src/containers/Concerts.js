@@ -39,7 +39,7 @@ export default class Concerts extends Component {
 
     concertsToShow() {
         return this.state.concerts.map(concert => {
-            return <Concert conData={concert} />
+            return <Concert key={concert.id} conData={concert} />
         })
     }
 
