@@ -54,11 +54,11 @@ export default class ArtistsSuggestions extends Component {
     };
 
 
-    onChange = (event, { newValue }) => {
+    onChange = (key, { newValue }) => {
         this.setState({
             value: newValue
         });
-        this.props.getValueFromSuggestion(newValue)
+        this.props.getValueFromSuggestion(key, newValue)
     };
 
     // Autosuggest will call this function every time you need to update suggestions.
@@ -83,8 +83,9 @@ export default class ArtistsSuggestions extends Component {
         const inputProps = {
             placeholder: 'Artist...',
             value,
-            onChange: this.onChange
+            onChange: (event, newValue) => this.onChange('artist', newValue),
         };
+
 
         // Finally, render it!
         return (

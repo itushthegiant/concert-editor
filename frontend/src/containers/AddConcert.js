@@ -44,15 +44,9 @@ export default class AddConcert extends Component {
 
     }
 
-    getValueFromSuggestion = (value) => {
+    getValueFromSuggestion = (key, value) => {
         this.setState({
-            artist: value
-        })
-    }
-
-    getValueFromVenue = (value) => {
-        this.setState({
-            venue: value
+            [key]: value
         })
     }
 
@@ -77,7 +71,7 @@ export default class AddConcert extends Component {
                 <form onSubmit={this.handleOnSubmit}>
                     <AddTitle getValueFromTitle={this.getValueFromTitle} />
                     <AddDate getValueFromDate={this.getValueFromDate}/>
-                    <VenueSuggestions getValueFromVenue={this.getValueFromVenue}/>
+                    <VenueSuggestions getValueFromSuggestion={this.getValueFromSuggestion}/>
                     <ArtistsSuggestion getValueFromSuggestion={this.getValueFromSuggestion} />
                     <Button className="add-concert" variant="contained" color="primary" type="submit">
                         Submit

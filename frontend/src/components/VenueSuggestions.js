@@ -55,11 +55,11 @@ export default class VenueSuggestions extends Component {
     };
 
 
-    onChange = (event, { newValue }) => {
+    onChange = (key, { newValue }) => {
         this.setState({
             value: newValue
         });
-        this.props.getValueFromVenue(newValue)
+        this.props.getValueFromSuggestion(key, newValue)
     };
 
     // Autosuggest will call this function every time you need to update suggestions.
@@ -84,7 +84,7 @@ export default class VenueSuggestions extends Component {
         const inputProps = {
             placeholder: 'Venue...',
             value,
-            onChange: this.onChange
+            onChange: (event, newValue) => this.onChange('venue', newValue),
         };
 
         // Finally, render it!
