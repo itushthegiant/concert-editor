@@ -34,6 +34,9 @@ export default function Concert(props) {
                                 {props.conData.title}
                             </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">
+                                Artist: {props.conData.artist.name}
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" component="p">
                                 Genre: {props.conData.artist.genre}
                             </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">

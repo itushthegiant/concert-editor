@@ -62,7 +62,7 @@ export default class AddConcert extends Component {
                     <AddDate getValueFromSuggestion={this.getValueFromSuggestion}/>
                     <VenueSuggestions getValueFromSuggestion={this.getValueFromSuggestion}/>
                     <ArtistsSuggestion getValueFromSuggestion={this.getValueFromSuggestion} />
-                    <Button className="add-concert" variant="contained" color="primary" type="submit">
+                    <Button className="add-concert-button" variant="contained" color="primary" type="submit">
                         Submit
                     </Button>
                 </form>
