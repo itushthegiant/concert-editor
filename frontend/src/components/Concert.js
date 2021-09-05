@@ -1,18 +1,19 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Image from '../assets/ripples.png';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 
 const useStyles = makeStyles({
     root: {
         maxWidth: 345,
+        backgroundImage: `url(${Image})`
     },
     media: {
         height: 140,
@@ -28,7 +29,6 @@ export default function Concert(props) {
         <div>
             <Box component="span" m={3} className="card-box">
                 <Card className={classes.root}>
-                    <CardActionArea>
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="h2">
                                 {props.conData.title}
@@ -49,10 +49,9 @@ export default function Concert(props) {
                                 Address: {props.conData.venue.location}
                             </Typography>
                         </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                        <button id={props.conData.id} onClick={props.handleClick}>Remove</button>
-                    </CardActions>
+                        <button className="remove-button" id={props.conData.id} onClick={props.handleClick}>
+                        <FontAwesomeIcon icon={faTrashAlt} />
+                        </button>
                 </Card>
             </Box>
 

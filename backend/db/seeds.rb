@@ -11,3 +11,11 @@ require 'pry'
 
 # Concert.create(title: "Program The Dead in Pepe C. Cola Hall", venue_id: 1, artist_id: 1, date: Faker::Date.forward)
 # Concert.create(title: "Catherine Wheel in Phil A. Mignon Hall", venue_id:2 , artist_id: 2, date: Faker::Date.forward)
+# Concert.create(title: "Program The Dead in Pepe C. Cola Hall", venue_id: 1, artist_id: 1, date: Faker::Date.forward)
+# Concert.create(title: "Catherine Wheel in Phil A. Mignon Hall", venue_id:2 , artist_id: 2, date: Faker::Date.forward)
+# Concert.create(title: "Program The Dead in Pepe C. Cola Hall", venue_id: 1, artist_id: 1, date: Faker::Date.forward)
+# Concert.create(title: "Catherine Wheel in Phil A. Mignon Hall", venue_id:2 , artist_id: 2, date: Faker::Date.forward)
+# Concert.create(title: "Program The Dead in Pepe C. Cola Hall", venue_id: 1, artist_id: 1, date: Faker::Date.forward)
+# Concert.create(title: "Catherine Wheel in Phil A. Mignon Hall", venue_id:2 , artist_id: 2, date: Faker::Date.forward)
+# Concert.create(title: "Program The Dead in Pepe C. Cola Hall", venue_id: 1, artist_id: 1, date: Faker::Date.forward)
+# Concert.create(title: "Catherine Wheel in Phil A. Mignon Hall", venue_id:2 , artist_id: 2, date: Faker::Date.forward)

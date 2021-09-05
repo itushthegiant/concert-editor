@@ -26,6 +26,10 @@ code {
   display: inline-block;
 }
 
+.card {
+  background-image: url('./assets/ripples.png');
+}
+
 .add-concert {
   text-align: center;
 }
@@ -102,4 +106,31 @@ margin-top: 20px !important;
 .react-autosuggest__suggestion-match {
   color: red;
   font-weight: bold;
+}
+
+.remove-button {
+  transition-duration: 0.4s;
+  background-color: red;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+}
+
+.remove-button:hover {
+  background-color: #4CAF50;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: white;
+}
+
+
+.remove-button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
