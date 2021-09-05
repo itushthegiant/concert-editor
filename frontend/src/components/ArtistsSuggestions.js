@@ -4,8 +4,6 @@ import Autosuggest from 'react-autosuggest';
 
 
 
-
-
 // When suggestion is clicked, Autosuggest needs to populate the input
 // based on the clicked suggestion. Teach Autosuggest how to calculate the
 // input value for every given suggestion.
@@ -84,6 +82,7 @@ export default class ArtistsSuggestions extends Component {
             placeholder: 'Artist...',
             value,
             onChange: (event, newValue) => this.onChange('artist', newValue),
+            backgroundImage: `url(${Image})`
         };
 
 
