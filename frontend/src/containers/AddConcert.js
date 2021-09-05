@@ -17,12 +17,7 @@ export default class AddConcert extends Component {
     }
 
 
-    handleOnChange = (event) => {
-        const { name, value } = event.target
-        this.setState({
-            [name]: value
-        })
-    }
+
 
     handleOnSubmit = (event) => {
         event.preventDefault()
@@ -41,8 +36,9 @@ export default class AddConcert extends Component {
         })
         .then(resp => resp.json())
         .then(this.props.history.push("/concerts"))
-
     }
+
+
 
     getValueFromSuggestion = (key, value) => {
         this.setState({

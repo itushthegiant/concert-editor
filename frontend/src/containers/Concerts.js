@@ -18,7 +18,9 @@ export default class Concerts extends Component {
             .then(data => this.setState({
                 concerts: data
             }))
+
     }
+
 
 
     componentDidUpdate() {
@@ -33,6 +35,8 @@ export default class Concerts extends Component {
                 })
             })
     }
+
+
 
     
 

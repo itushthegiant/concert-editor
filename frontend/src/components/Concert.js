@@ -51,8 +51,8 @@ export default function Concert(props) {
                         </CardContent>
                     </CardActionArea>
                     <CardActions>
-                        <Button size="small" color="primary">
-                            Learn More
+                        <Button variant="contained" color="secondary">
+                            Remove
                         </Button>
                     </CardActions>
                 </Card>

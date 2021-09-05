@@ -12,7 +12,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function NaviBar() {
 
-  
 
     return (
         <div className='nav-bar'>
