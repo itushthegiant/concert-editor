@@ -51,9 +51,7 @@ export default function Concert(props) {
                         </CardContent>
                     </CardActionArea>
                     <CardActions>
-                        <Button variant="contained" color="secondary">
-                            Remove
-                        </Button>
+                        <button id={props.conData.id} onClick={props.handleClick}>Remove</button>
                     </CardActions>
                 </Card>
             </Box>

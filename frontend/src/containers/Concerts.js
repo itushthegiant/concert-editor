@@ -12,6 +12,8 @@ export default class Concerts extends Component {
         concerts: []
     }
 
+    
+
     componentDidMount() {
         fetch('http://localhost:9292/concerts')
             .then(resp => resp.json())
@@ -27,23 +29,33 @@ export default class Concerts extends Component {
         fetch('http://localhost:9292/concerts')
             .then(resp => resp.json())
             .then(data => {
-                if (data.length === this.state.concerts.length) 
+                if (data.length === this.state.concerts.length)
                     console.log(data.length)
                 else
-                this.setState({
-                    concerts: data
-                })
+                    this.setState({
+                        concerts: data
+                    })
             })
     }
 
 
 
-    
+    handleClick = (event) => {
+        fetch(`http://localhost:9292/concerts/${event.target.id}`, {
+            method: 'DELETE',
+        })
+            .then(res => res.json())
+            .then(res => console.log(res))
+    }
+
+
+
+
 
 
     concertsToShow() {
         return this.state.concerts.map(concert => {
-            return <Concert key={concert.id} conData={concert} />
+            return <Concert key={concert.id} conData={concert} handleClick={this.handleClick} />
         })
     }
 
@@ -59,7 +71,7 @@ export default class Concerts extends Component {
                     justifyContent="center"
                     alignItems="center"
                 >
-                {this.concertsToShow()}
+                    {this.concertsToShow()}
                 </Grid>
             </div>
         )
