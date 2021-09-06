@@ -79,7 +79,7 @@ export default class AddTitle extends Component {
 
         // Finally, render it!
         return (
-            <Autosuggest
+            <Autosuggest 
                 suggestions={suggestions}
                 onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
                 onSuggestionsClearRequested={this.onSuggestionsClearRequested}
