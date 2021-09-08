@@ -10,8 +10,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 
+
 export default function NaviBar() {
 
+    
 
     return (
         <div className='nav-bar'>
@@ -23,15 +25,13 @@ export default function NaviBar() {
                         </Typography>
                     </Toolbar>
                     <Tabs aria-label="simple tabs example" className='tabs'>
-                        <Tab id="simple-tab-0" label="Upcoming Concerts" href="/concerts" />
-                        <Tab id="simple-tab-1" label="add concert" href="/edit" />
+                        <Tab  label="Upcoming Concerts" href="/concerts"  />
+                        <Tab  label="add concert" href="/edit" />
                     </Tabs>
                 </AppBar>
             </div>
         </div>
     );
 }
-
-
 
 

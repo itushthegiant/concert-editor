@@ -57,7 +57,6 @@ class Application
       concert.delete
       return [200, { 'Content-Type' => 'application/json' }, [ {message: 'Concert deleted!'}.to_json ]]
 
-
     else
       resp.write "Path Not Found"
     end 
