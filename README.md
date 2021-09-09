@@ -21,3 +21,15 @@ Welcome to my concert editor, you can add or delete concert.
 4. Styling has been made with "MaterialUI" and CSS.
 
 ## "As a user..."
+
+1. I want to see all the concerts in the home page.
+
+2. I want to add a concert with: title, date, artist name, venue.
+
+3. I want to remove any concert i want from the database.
+
+# Thanks!
+
+I wanna thank Misha Moroshko, for the "React auto-suggest" framework, it was a big help!
+
+"React auto-suggest" repo ("https://github.com/moroshko/react-autosuggest#on-suggestion-selected-prop")
