@@ -18,7 +18,6 @@ export default class AddConcert extends Component {
 
 
 
-
     handleOnSubmit = (event) => {
         event.preventDefault()
         fetch('http://localhost:9292/concerts', {
@@ -45,7 +44,6 @@ export default class AddConcert extends Component {
             [key]: value
         })
     }
-
 
 
 

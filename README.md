@@ -1,17 +1,13 @@
-# Phase 3 Project
+# Concert Editor
 
-## Requirements
+Welcome to my concert editor, you can add or delete concert.
 
-1. Access a Sqlite3 database using Active Record.
-2. You should have a minimum of two models with a one to many relationship.
-3. You should build out a simple **React** frontend to give your user 3 of the 4
-   CRUD abilities for at least one of your resources. For example, build out a
-   todo list. A user should be able to create a new todo, see all todos,
-   update a todo item, and delete a todo. Todos can be grouped into categories,
-   so that a todo has many categories and categories have many todos.
-4. Use good OO design patterns. You should have separate classes for your
-   models.
 
+# project No.3
+      by : Etamar Levy
+      database: (http://localhost:9292) 
+      GitHub rep: 
+      **To start the app use command "npm start" & "shotgun --port=9292"**
 ## Getting Started
 
 Clone down this repository. A basic Rack app is located in the `backend` folder.

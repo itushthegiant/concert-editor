@@ -4,14 +4,11 @@ import Grid from '@material-ui/core/Grid';
 
 
 
-
-
 export default class Concerts extends Component {
 
     state = {
         concerts: [],
     }
-
 
 
     componentDidMount() {
@@ -22,7 +19,6 @@ export default class Concerts extends Component {
             }))
 
     }
-
 
 
     componentDidUpdate() {
@@ -40,7 +36,6 @@ export default class Concerts extends Component {
 
 
 
-
     handleClick = (event) => {
         fetch(`http://localhost:9292/concerts/${event.target.id}`, {
             method: 'DELETE',
@@ -53,13 +48,11 @@ export default class Concerts extends Component {
 
 
 
-
-    concertsToShow() {
+    concertsToShow = () => {
         return this.state.concerts.map(concert => {
             return <Concert key={concert.id} conData={concert} handleClick={this.handleClick} />
         })
     }
-
 
 
 

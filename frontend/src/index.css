@@ -16,7 +16,8 @@ code {
 
 
 .tabs {
-  margin-left: 450px;
+  margin-left: 200px;
+  text-align: center;
 }
 
 .header {
@@ -25,6 +26,7 @@ code {
 
 .card-box {
   display: inline-block;
+  box-shadow: 0 4px 8px 0 darkblue, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card {
@@ -114,7 +116,7 @@ margin-top: 20px !important;
   background-color: red;
   border-radius: 12px;
   border: none;
-  color: white;
+  color: rgb(253, 250, 250);
   padding: 20px;
   text-align: center;
   text-decoration: none;
