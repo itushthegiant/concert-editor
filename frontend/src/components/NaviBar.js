@@ -25,7 +25,7 @@ export default function NaviBar() {
                         </Typography>
                     </Toolbar>
                     <Tabs aria-label="simple tabs example" className='tabs'>
-                        <Tab  label="Upcoming Concerts" href="/concerts"  />
+                        <Tab  label="Upcoming Concerts" href="/"  />
                         <Tab  label="add concert" href="/edit" />
                     </Tabs>
                 </AppBar>
